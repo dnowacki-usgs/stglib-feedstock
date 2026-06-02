@@ -1,6 +1,6 @@
 {% set version = "1.12.0" %}
-{% set python_min = "3.10" %}
-{% set python_max = "3.13" %}
+{% set python_min = "3.11" %}
+{% set python_max = "3.14" %}
 
 package:
   name: stglib
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - runaqdhdr2cdf.py=stglib.core.runcmd:runaqdhdr2cdf
