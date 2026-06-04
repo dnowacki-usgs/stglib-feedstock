@@ -1,4 +1,4 @@
-{% set version = "1.12.0" %}
+{% set version = "1.12.1" %}
 {% set python_min = "3.11" %}
 {% set python_max = "3.15" %}
 # python_min is >=, python_max is <
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://github.com/USGS-CMG/stglib/archive/v{{ version }}.tar.gz
-  sha256: 73c716b9d27e6b603ba67af632462807d2abdb28ce1075fd2581a9cca55c2add
+  sha256: 31981c0ee5bc4a30f0bb815b3b1ed24dddb6ab4b4dbc77230f828a35d845a03e
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - runaqdhdr2cdf.py=stglib.core.runcmd:runaqdhdr2cdf
